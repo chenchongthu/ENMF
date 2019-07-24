@@ -10,11 +10,13 @@ In SIGIR'19.*
 **Please cite our SIGIR'19 paper if you use our codes. Thanks!**
 
 ```
-@inproceedings{chen2019an,
+@inproceedings{chen2019efficient,
   title={An Efficient Adaptive Transfer Neural Network for Social-aware Recommendation},
   author={Chen, Chong and Zhang, Min and Wang, Chenyang and Ma, Weizhi and Li, Minming and Liu, Yiqun and Ma, Shaoping},
-  booktitle={Proceedings of SIGIR},
+  booktitle={Proceedings of the 42nd International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages={225--234},
   year={2019},
+  organization={ACM}
 }
 ```
 
