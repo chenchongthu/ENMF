@@ -40,7 +40,8 @@ doi = {10.1145/3373807},
 journal = {ACM Trans. Inf. Syst.}, 
 month = jan, 
 articleno = {Article 14}, 
-numpages = {28}}
+numpages = {28}
+}
 ```
 
 Author: Chong Chen (cstchenc@163.com)
