@@ -21,7 +21,7 @@ def parse_args():
                         help='Embedding size.')
     parser.add_argument('--lr', type=float, default=0.05,
                         help='Learning rate.')
-    parser.add_argument('--dropout', type=float, default=0.5,
+    parser.add_argument('--dropout', type=float, default=0.7,
                         help='dropout keep_prob')
     parser.add_argument('--negative_weight', type=float, default=0.1,
                         help='weight of non-observed data')
