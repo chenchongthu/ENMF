@@ -25,7 +25,7 @@ def parse_args():
                         help='dropout keep_prob')
     parser.add_argument('--negative_weight', type=float, default=0.1,
                         help='weight of non-observed data')
-    parser.add_argument('--topK', nargs='?', type=int, default=[10,50,100],
+    parser.add_argument('--topK', nargs='?', type=int, default=[50,100,200],
                         help='topK for hr/ndcg')
 
     return parser.parse_args()
