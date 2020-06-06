@@ -75,7 +75,7 @@ parser.add_argument('--dropout', type=float, default=0.7,
 parser.add_argument('--negative_weight', type=float, default=0.05,
                         help='weight of non-observed data')
 ```
-Dataset: Ye2018
+Dataset: Yelp2018
 
 |    Model    | Recall@20 | NDCG@20 |
 | :---------: | :-------: | :----------: |
@@ -109,4 +109,4 @@ Specifically, we suggest to tune "negative_weight" among \[0.001,0.005,0.01,0.02
 Generally, the performance of our ENMF is better than existing state-of-the-art recommendation models like NCF, CovNCF, CMN, and NGCF. You can also contact us if you can not tune the parameters properly.
 
 
-Last Update Date: May 19, 2020
+
