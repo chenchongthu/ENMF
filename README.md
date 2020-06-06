@@ -61,6 +61,37 @@ Train and evaluate the model:
 ```
 python ENMF.py
 ```
+
+## Comparison with the most recent methods （updating）
+
+1. LightGCN (SIGIR 2020) [LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation](http://staff.ustc.edu.cn/~hexn/papers/sigir20-LightGCN.pdf).
+
+To be consistent to LightGCN, we use the same evaluation metrics (i.e., `Recall@K` and `NDCG@K`), use the same data Yelp2018 released in LightGCN (https://github.com/kuandeng/LightGCN).
+
+The parameters of our ENMF on Yelp2018 are as follows:
+```
+parser.add_argument('--dropout', type=float, default=0.7,
+                        help='dropout keep_prob')
+parser.add_argument('--negative_weight', type=float, default=0.05,
+                        help='weight of non-observed data')
+```
+Dataset: Ye2018
+
+|    Model    | Recall@20 | NDCG@20 |
+| :---------: | :-------: | :----------: |
+|     NGCF    |  0.0579   |    0.0477    |  
+|     Mult-VAE     |  0.0584   |    0.0450    | 
+|    GRMF    |  0.0571   |    0.0462    | 
+|   LightGCN |  0.0649   |    0.0530    |
+|   ENMF |  0.0650   |    0.0515    |
+
+
+
+
+
+
+
+
 ## Suggestions for parameters
 
 Two important parameters need to be tuned for different datasets, which are:
