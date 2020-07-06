@@ -13,7 +13,7 @@ This is also the codes of the TOIS paper:
 *Chong Chen, Min Zhang, Yongfeng Zhang, Yiqun Liu and Shaoping Ma. 2020. [Efficient Neural Matrix Factorization without Sampling for Recommendation.](https://chenchongthu.github.io/files/TOIS_ENMF.pdf) 
 In TOIS Vol. 38, No. 2, Article 14.*
 
-The slides of this work has been uploaded and a chinese version video presentation can be found at [Demo](https://www.bilibili.com/video/BV1Z64y1u7GK?from=search&seid=10581986304255794319)
+The slides of this work has been uploaded and a chinese version video presentation can be found at [Demo](https://www.bilibili.com/video/BV1Z64y1u7GK?from=search&seid=10581986304255794319).
 
 **Please cite our SIGIR'19 paper or TOIS paper if you use our codes. Thanks!**
 
