@@ -66,7 +66,7 @@ python ENMF.py
 
 ## Comparison with the most recent methods （updating）
 
-### LightGCN (SIGIR 2020) [LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation](http://staff.ustc.edu.cn/~hexn/papers/sigir20-LightGCN.pdf).
+### 1. LightGCN (SIGIR 2020) [LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation](http://staff.ustc.edu.cn/~hexn/papers/sigir20-LightGCN.pdf).
 
 To be consistent with LightGCN, we use the same evaluation metrics (i.e., `Recall@K` and `NDCG@K`), use the same data Yelp2018 released in LightGCN (https://github.com/kuandeng/LightGCN).
 
@@ -87,7 +87,7 @@ Dataset: Yelp2018
 |   LightGCN |  0.0649   |    0.0530    |
 |   ENMF |  0.0650   |    0.0515    |
 
-### NBPO (SIGIR 2020) [Sampler Design for Implicit Feedback Data by Noisy-label Robust Learning](https://doi.org/10.1145/3397271.3401155). 
+### 2. NBPO (SIGIR 2020) [Sampler Design for Implicit Feedback Data by Noisy-label Robust Learning](https://doi.org/10.1145/3397271.3401155). 
 This paper designs an adaptive sampler based on noisy-label robust learning for implicit feedback data. To be consistent with NBPO, we use the same evaluation metrics (i.e., `F1@K`, `NDCG@K`), use the same data Amazon-14core released in NBPO (https://github.com/Wenhui-Yu/NBPO). For fair comparison, we also set the embedding size as 50, which is utilized in the NBPO work.
 
 The parameters of our ENMF on Amazon-14core are as follows:
