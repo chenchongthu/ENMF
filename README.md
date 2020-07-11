@@ -85,12 +85,27 @@ Dataset: Yelp2018
 |     Mult-VAE     |  0.0584   |    0.0450    | 
 |    GRMF    |  0.0571   |    0.0462    | 
 |   LightGCN |  0.0649   |    0.0530    |
+| :---------: | :-------: | :----------: |
 |   ENMF |  0.0650   |    0.0515    |
 
+2. NBPO (SIGIR 2020) [Sampler Design for Implicit Feedback Data by Noisy-label Robust Learning] (https://doi.org/10.1145/3397271.3401155). This paper designs an adaptive sampler based on noisy-label robust learning for implicit feedback data. 
+To be consistent to NBPO, we use the same evaluation metrics (i.e., `F1@K`, `NDCG@K`), use the same data Amazon-14core released in NBPO (https://github.com/Wenhui-Yu/NBPO). For fair comparison, we also set the embedding size as 50, which is utilized in the NBPO work.
 
+The parameters of our ENMF on Amazon-14core are as follows:
+```
+parser.add_argument('--dropout', type=float, default=0.2,
+                        help='dropout keep_prob')
+parser.add_argument('--negative_weight', type=float, default=0.2,
+                        help='weight of non-observed data')
+```
+Dataset: Amazon-14core
 
-
-
+|    Model    | F1@5 | F1@10 |F1@20| NDCG@5 | NDCG@10 |NDCG@20|
+| :---------: | :-------: | :----------: | :---------: | :-------: | :----------: | :----------: |
+|     BPR    | 0.0326| 0.0317| 0.0275|0.04443| 0.0551| 0.0680| 
+|     NBPO     |  0.0401| 0.0357| 0.0313|0.0555| 0.0655| 0.0810|
+| :---------: | :-------: | :----------: | :---------: | :-------: | :----------: | :----------: |
+|   ENMF |  0.0419   |    0.0388    |0.0314|0.0566|0.0698|0.0823
 
 
 
