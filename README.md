@@ -105,6 +105,26 @@ Dataset: Amazon-14core
 |     NBPO     |  0.0401| 0.0357| 0.0313|0.0555| 0.0655| 0.0810|
 |   ENMF |  0.0419   |    0.0388    |0.0314|0.0566|0.0698|0.0823|
 
+### LCFN (ICML 2020)[Graph Convolutional Network for Recommendation with Low-pass Collaborative Filters](https://arxiv.org/pdf/2006.15516v1.pdf)
+To be consistent with NBPO, we use the same evaluation metrics (i.e., `F1@K`, `NDCG@K`), use the same data Movlelens-1m released in LCFN (https://github.com/Wenhui-Yu/LCFN/blob/master/params.py). For fair comparison, we also set the embedding size as 128, which is utilized in the LCFN work.
+
+The parameters of our ENMF on Movielens-1m (ml-lcfn) are as follows:
+```
+parser.add_argument('--dropout', type=float, default=0.5,
+                        help='dropout keep_prob')
+parser.add_argument('--negative_weight', type=float, default=0.5,
+                        help='weight of non-observed data')
+
+Dataset: Movielens-1m (ml-lcfn)
+
+|    Model    | F1@5 | F1@10 |F1@20| NDCG@5 | NDCG@10 |NDCG@20|
+| :---------: | :-------: | :----------: | :---------: | :-------: | :----------: | :----------: |
+|     GCMC    | 0.1166| 0.1437| 0.1564|0.2411| 0.2361| 0.2496| 
+|     NGCF     |  0.1153| 0.1425| 0.1582|0.2367| 0.2347| 0.2511|
+|     SCF     |  0.1189| 0.1451| 0.1600|0.2419| 0.2398| 0.2560|
+|     CGMC     |  0.1179| 0.1431| 0.1573|0.2408| 0.2372| 0.2514|
+|     LCFN     |  0.1213| 0.1482| 0.1625|0.2427| 0.2429| 0.2603|
+|   ENMF |  0.1239   |    0.1512    |0.1640|0.2457|0.2475|0.2656|
 
 
 ## Suggestions for parameters
