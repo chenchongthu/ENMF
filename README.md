@@ -66,6 +66,8 @@ python ENMF.py
 
 ## Comparison with the most recent methods （updating）
 
+If you want to see more comparison between our ENMF and any "state-of-the-art" recommendation models, feel free to propose an issue.
+
 ### 1. LightGCN (SIGIR 2020) [LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation](http://staff.ustc.edu.cn/~hexn/papers/sigir20-LightGCN.pdf).
 
 To be consistent with LightGCN, we use the same evaluation metrics (i.e., `Recall@K` and `NDCG@K`), use the same data Yelp2018 released in LightGCN (https://github.com/kuandeng/LightGCN).
