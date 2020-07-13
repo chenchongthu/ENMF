@@ -63,10 +63,25 @@ Train and evaluate the model:
 ```
 python ENMF.py
 ```
+## Suggestions for parameters
+
+Two important parameters need to be tuned for different datasets, which are:
+
+```
+parser.add_argument('--dropout', type=float, default=0.7,
+                        help='dropout keep_prob')
+parser.add_argument('--negative_weight', type=float, default=0.1,
+                        help='weight of non-observed data')
+```
+                        
+Specifically, we suggest to tune "negative_weight" among \[0.001,0.005,0.01,0.02,0.05,0.1,0.2,0.5]. Generally, this parameter is related to the sparsity of dataset. If the dataset is more sparse, then a small value of negative_weight may lead to a better performance.
+
+
+Generally, the performance of our ENMF is better than existing state-of-the-art recommendation models like NCF, CovNCF, CMN, and NGCF. You can also contact us if you can not tune the parameters properly.
 
 ## Comparison with the most recent methods （updating）
 
-Do the "state-of-the-art" recommendation models really perform well? If you want to see more comparison between our ENMF and any "state-of-the-art" recommendation models, feel free to propose an issue.
+Do the "state-of-the-art" recommendation models **really perform well?** If you want to see more comparison between our ENMF and any "state-of-the-art" recommendation models, feel free to propose an issue.
 
 ### 1. LightGCN (SIGIR 2020) [LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation](http://staff.ustc.edu.cn/~hexn/papers/sigir20-LightGCN.pdf).
 
@@ -130,21 +145,6 @@ Dataset: Movielens-1m (ml-lcfn)
 |   ENMF |  0.1239   |    0.1512    |0.1640|0.2457|0.2475|0.2656|
 
 
-## Suggestions for parameters
-
-Two important parameters need to be tuned for different datasets, which are:
-
-```
-parser.add_argument('--dropout', type=float, default=0.7,
-                        help='dropout keep_prob')
-parser.add_argument('--negative_weight', type=float, default=0.1,
-                        help='weight of non-observed data')
-```
-                        
-Specifically, we suggest to tune "negative_weight" among \[0.001,0.005,0.01,0.02,0.05,0.1,0.2,0.5]. Generally, this parameter is related to the sparsity of dataset. If the dataset is more sparse, then a small value of negative_weight may lead to a better performance.
-
-
-Generally, the performance of our ENMF is better than existing state-of-the-art recommendation models like NCF, CovNCF, CMN, and NGCF. You can also contact us if you can not tune the parameters properly.
 
 
 
