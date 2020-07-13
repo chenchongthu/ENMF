@@ -101,8 +101,8 @@ Dataset: Yelp2018
 |     NGCF    |  0.0579   |    0.0477    |  
 |     Mult-VAE     |  0.0584   |    0.0450    | 
 |    GRMF    |  0.0571   |    0.0462    | 
-|   LightGCN |  0.0649   |    0.0530    |
-|   ENMF |  0.0650   |    0.0515    |
+|   LightGCN |  0.0649   |    **0.0530**    |
+|   ENMF |  **0.0650**   |    0.0515    |
 
 ### 2. NBPO (SIGIR 2020) [Sampler Design for Implicit Feedback Data by Noisy-label Robust Learning](https://doi.org/10.1145/3397271.3401155). 
 This paper designs an adaptive sampler based on noisy-label robust learning for implicit feedback data. To be consistent with NBPO, we use the same evaluation metrics (i.e., `F1@K`, `NDCG@K`), use the same data Amazon-14core released in NBPO (https://github.com/Wenhui-Yu/NBPO). For fair comparison, we also set the embedding size as 50, which is utilized in the NBPO work.
@@ -120,7 +120,7 @@ Dataset: Amazon-14core
 | :---------: | :-------: | :----------: | :---------: | :-------: | :----------: | :----------: |
 |     BPR    | 0.0326| 0.0317| 0.0275|0.0444| 0.0551| 0.0680| 
 |     NBPO     |  0.0401| 0.0357| 0.0313|0.0555| 0.0655| 0.0810|
-|   ENMF |  0.0419   |    0.0388    |0.0314|0.0566|0.0698|0.0823|
+|   ENMF |  **0.0419**   |    **0.0388**    |**0.0314**|**0.0566**|**0.0698**|**0.0823**|
 
 ### 3. LCFN (ICML 2020)[Graph Convolutional Network for Recommendation with Low-pass Collaborative Filters](https://arxiv.org/pdf/2006.15516v1.pdf)
 To be consistent with LCFN, we use the same evaluation metrics (i.e., `F1@K`, `NDCG@K`), use the same data Movlelens-1m released in LCFN (https://github.com/Wenhui-Yu/LCFN). For fair comparison, we also set the embedding size as 128, which is utilized in the LCFN work.
@@ -142,7 +142,7 @@ Dataset: Movielens-1m (ml-lcfn)
 |     SCF     |  0.1189| 0.1451| 0.1600|0.2419| 0.2398| 0.2560|
 |     CGMC     |  0.1179| 0.1431| 0.1573|0.2408| 0.2372| 0.2514|
 |     LCFN     |  0.1213| 0.1482| 0.1625|0.2427| 0.2429| 0.2603|
-|   ENMF |  0.1239   |    0.1512    |0.1640|0.2457|0.2475|0.2656|
+|   ENMF |  **0.1239**   |    **0.1512**    |**0.1640**|**0.2457**|**0.2475**|**0.2656**|
 
 
 
