@@ -146,7 +146,7 @@ Dataset: Movielens-1m (ml-lcfn)
 
 
 ### 4. DHCF (KDD 2020)[Dual Channel Hypergraph Collaborative Filtering](http://gaoyue.org/paper/shuyi_KDD_final.pdf)
-To be consistent with DHCF, we use the same evaluation metrics (i.e., `Precision@K`, `Recall@K`), use the same data CiteUlike-A (Provided by the authors). For fair comparison, we also set the embedding size as 64, which is utilized in the DHCF work.
+To be consistent with DHCF, we use the same evaluation metrics (i.e., `Precision@K`, `Recall@K`), use the same data CiteUlike-A (provided by the authors). For fair comparison, we also set the embedding size as 64, which is utilized in the DHCF work.
 
 The parameters of our ENMF on CiteUlike-A are as follows:
 ```
@@ -166,7 +166,7 @@ Dataset: CiteUlike-A
 |     PinSage    |  0.0508| 0.0194|
 |     NGCF     |  0.0517| 0.0193|
 |     DHCF     |  0.0635| 0.0249|
-|   ENMF |  **0.7482**   |    **0.0280**    |
+|   ENMF |  **0.0748**   |    **0.0280**    |
 
 
 
