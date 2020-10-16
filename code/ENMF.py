@@ -198,7 +198,7 @@ def dev_cold(u_train, i_train, test_set, train_m, test_m):
             true_bin[test_m[u_b].nonzero()] = True
 
             tmp = (np.logical_and(true_bin, pre_bin).sum(axis=1)).astype(np.float32)
-            recall.append(tmp / np.minimum(100, true_bin.sum(axis=1)))
+            recall.append(tmp / true_bin.sum(axis=1))
 
             idx_topk_part = np.argpartition(-pre, 100, 1)
 
@@ -287,7 +287,7 @@ def dev_step(test_set, train_m, test_m,args):
             true_bin[test_m[u_b].nonzero()] = True
 
             tmp = (np.logical_and(true_bin, pre_bin).sum(axis=1)).astype(np.float32)
-            recall.append(tmp / np.minimum(kj, true_bin.sum(axis=1)))
+            recall.append(tmp / true_bin.sum(axis=1))
             # print tmp
 
         # ndcg10
