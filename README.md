@@ -194,5 +194,5 @@ Dataset: Movielens-1m (ml-srns)
 | AdvIR   | 0.1792     | 0.2889     | 0.3699     |
 | ENMF (reported in the srns paper)   | 0.1846     | 0.2970     | 0.3804     | (inaccurate results)
 | SRNS    | 0.1911     | 0.3056     | 0.3907     |
-| ENMF (our )  | **0.1917**     | **0.3124**     | **0.4016**    |
+| ENMF (our)  | **0.1917**     | **0.3124**     | **0.4016**    |
 
