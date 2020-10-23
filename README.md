@@ -168,7 +168,31 @@ Dataset: CiteUlike-A
 |     DHCF     |  0.0635| 0.0249|
 |   ENMF |  **0.0748**   |    **0.0280**    |
 
+### 5. SRNS (NeurIPS 2020)[Simplify and Robustify Negative Sampling for Implicit Collaborative Filtering](https://arxiv.org/pdf/2009.03376.pdf)
 
+This work proposes a simplified and robust negative sampling approach SRNS for implicit CF. The authors have compared their SRNS method with our ENMF in the original paper. However, we reran the experiment and got some **different** results.
 
+To be consistent with SRNS, we use the same evaluation metrics (i.e., `NDCG@K`, `Recall@K`), use the same data Movlelens-1m released in SRNS (https://github.com/dingjingtao/SRNS). For fair comparison, we also set the embedding size as 32, which is utilized in the DHCF work. 
 
+The parameters of our ENMF on Movielens-1m(ml-srns) are as follows:
+```
+parser.add_argument('--dropout', type=float, default=0.9,
+                        help='dropout keep_prob')
+parser.add_argument('--negative_weight', type=float, default=0.3,
+                        help='weight of non-observed data')
+```        
+
+Dataset: Movielens-1m (ml-srns)
+
+| Model   | N@1        | N@3        | R@3        |
+| ------- | ---------- | ---------- | ---------- |
+| Uniform | 0.1744     | 0.2846     | 0.3663     |
+| NNCF    | 0.0831     | 0.1428     | 0.1873     |
+| AOBPR   | 0.1782     | 0.2907     | 0.3749     |
+| IRGAN   | 0.1763     | 0.2878     | 0.3706     |
+| RNS-AS  | 0.1810     | 0.2950     | 0.3801     |
+| AdvIR   | 0.1792     | 0.2889     | 0.3699     |
+| ENMF (reported in the srns paper)   | 0.1846     | 0.2970     | 0.3804     | (inaccurate results)
+| SRNS    | 0.1911     | 0.3056     | 0.3907     |
+| ENMF (our )  | **0.1917**     | **0.3124**     | **0.4016 **    |
 
