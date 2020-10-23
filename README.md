@@ -172,7 +172,7 @@ Dataset: CiteUlike-A
 
 This work proposes a simplified and robust negative sampling approach SRNS for implicit CF. The authors have compared their SRNS method with our ENMF in the original paper. However, we reran the experiment and got some **different** results.
 
-To be consistent with SRNS, we use the same evaluation metrics (i.e., `NDCG@K`, `Recall@K`), use the same data Movlelens-1m released in SRNS (https://github.com/dingjingtao/SRNS). For fair comparison, we also set the embedding size as 32, which is utilized in the DHCF work. 
+To be consistent with SRNS, we use the same evaluation metrics (i.e., `NDCG@K`, `Recall@K`), use the same data Movlelens-1m released in SRNS (https://github.com/dingjingtao/SRNS). For fair comparison, we also set the embedding size as 32, which is utilized in the SRNS work. 
 
 The parameters of our ENMF on Movielens-1m(ml-srns) are as follows:
 ```
